@@ -1,0 +1,224 @@
+// start section box tabs ver0.0.2
+.big_content {
+  background-image: url("../img/pattern-2.png");
+  background-repeat: repeat;
+  padding: 100px 0;
+
+  li {
+    margin-right: 20px;
+    a {
+      font-size: 35px;
+      text-align: center;
+      color: $color-black-0;
+      padding: 26px 70px;
+      background-color: #191d1b0f;
+      text-decoration: none;
+      position: relative;
+      display: block;
+      transition: all 0.5s ease-in-out;
+      &::before {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -10px;
+        content: "";
+        opacity: 0;
+        border-width: 10px 10px 0 10px;
+        border-style: solid;
+        border-color: $color-white-0 transparent transparent transparent;
+      }
+      & {
+        &:hover {
+          color: $color-black-0;
+          text-decoration: none;
+        }
+      }
+      & {
+        &:hover::before {
+          opacity: 1;
+        }
+      }
+      & {
+        &:hover {
+          background: $color-white-0;
+          opacity: 1;
+        }
+      }
+      &.active {
+        background: $color-white-0 !important;
+      }
+      &.active::before {
+        opacity: 1;
+      }
+    }
+  }
+  .about_content {
+    margin-top: 30px;
+    .tab-pane {
+      line-height: 30px;
+      .big_content_title {
+        display: block;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .big_content {
+    ul {
+      display: block !important;
+      li {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    .container {
+      max-width: none;
+    }
+    .tab-pane {
+      span {
+        letter-spacing: 2px;
+        color: #7e7e7e;
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+//end box tabs
+// start counter ver0.0.1
+.counter_parent {
+  padding: 80px 0;
+  width: 100%;
+  background: #1b1b1b;
+  .counter_item {
+    width: 100%;
+    .counter_content {
+      font-size: 40px;
+      & p {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// end counter
+// start logo page
+.footer_icon {
+  padding: 100px 0;
+  width: 100%;
+}
+
+// end logo page
+.footer {
+  background-color: $bg-color;
+  color: $color;
+  // Start Primamty_Footer
+  .primmaty__content {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+    padding-top: 100px;
+    .primmaty__footer {
+      .title {
+        font: {
+          weight: none;
+          size: 14px;
+        }
+        color: $color-white-0;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+      }
+      .f-list {
+        margin: 0;
+        padding: 0;
+        li {
+          font-weight: none;
+          list-style: none;
+          border-bottom: 1px solid $color-border;
+          i {
+            &:hover {
+              color: $color-hover;
+            }
+          }
+          a {
+            font-weight: $fw-normal;
+            color: #a2a2a2;
+            text-decoration: none;
+            padding: 0 20px;
+            line-height: 45px;
+            &:hover {
+              color: $color-hover;
+            }
+          }
+        }
+      }
+      .list__recent {
+        margin-top: 20px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+        img {
+          width: 95%;
+        }
+      }
+    }
+  }
+  // End Primmaty_Footer
+  // Start Secondary_Footer
+  .secondary__content {
+    background: #1b1b1b;
+    display: inline-block;
+    width: 100%;
+    padding: 40px;
+    border-top: 1px solid $color-border;
+    font-weight: $fw-normal;
+    .secondary__footer {
+      width: 90%;
+      margin: auto;
+      .secondary__title {
+        a {
+          color: $color-white-0;
+          &:hover {
+            text-decoration: none;
+            color: $color-hover;
+          }
+        }
+      }
+      .secondary__icons {
+        .icon {
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+          border: 1px solid $color-border;
+          @include boder-rd(50%);
+          text-align: center;
+          .fab {
+            line-height: 35px;
+            font-size: 20px;
+            @include transition(0.25s, linear);
+            color: $color-fab;
+            &:hover {
+              color: $color-white-0;
+              border: 1px solid transparent;
+              background: $color-fab;
+              width: 35px;
+              height: 35px;
+              @include boder-rd(50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Secondary_Footer

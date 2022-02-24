@@ -1,0 +1,13 @@
+@mixin transition ($properties1, $properties2) {
+    transition: $properties1 $properties2;
+    -webkit-transition: $properties1 $properties2;
+    -moz-transition: $properties1 $properties2;
+    -o-transition: $properties1 $properties2;
+}
+
+@mixin boder-rd ($properties1) {
+    border-radius: $properties1;
+    -moz-boder-radius: $properties1;
+    -webkit-boder-radius: $properties1;
+    -o-border-radius: $properties1;
+}
